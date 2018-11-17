@@ -1,4 +1,4 @@
-T = readtable('copy.csv');
+T = readtable('trainingData.csv');
 id = {'NA' '' -99 NaN Inf};
 sumMiss = sum(ismissing(T,id));
 per = sumMiss / 353546 * 100;
@@ -16,5 +16,5 @@ for n1=1:length(array)
     head(T,353546);
 end
 
-writetable(T,'myData.csv');
-type 'myData.csv';
+writetable(T,'ReducedTrainingData.csv');
+type 'ReducedTrainingData.csv';
